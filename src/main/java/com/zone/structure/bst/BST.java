@@ -241,6 +241,8 @@ public class BST<E extends Comparable<E>> {
 
     }
 
+    //删除已node为根的二分搜索树中元素为e的节点，
+    //返回删除节点后新的二分搜索树的根
     private Node remove(Node node,E e){
 
         if (node == null)

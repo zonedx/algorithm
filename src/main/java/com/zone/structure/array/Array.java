@@ -1,5 +1,7 @@
 package com.zone.structure.array;
 
+//import org.omg.CORBA.Object;
+
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -25,6 +27,13 @@ public class Array<E> {
      */
     public Array() {
         this(10);
+    }
+
+    public Array(E arr[]){
+        data = (E[]) new Object[arr.length];
+        for (int i = 0; i < arr.length; i++)
+            data[i] = arr[i];
+        size = arr.length;
     }
 
     /**
@@ -210,6 +219,15 @@ public class Array<E> {
             return true;
         }
         return false;
+    }
+
+    public void swap(int i,int j){
+        if (i < 0 || i >= size || j < 0 || j >= size)
+            throw new IllegalArgumentException("Index is illegal.");
+
+        E temp = data[i];
+        data[i] = data[j];
+        data[j] = temp;
     }
 
     @Override
