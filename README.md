@@ -61,3 +61,15 @@
     动态区间问题
     时间复杂度：
         查询：O(logn) 更新：O(logn)
+        
+9、并查集
+    
+    高效处理连接问题
+    使用数组模拟的Quick Find：isConnected    O(1)
+                            unionElements  O(n)
+    
+    优化后的并查集：O(logh)-->O(log*n)=1+log*(logn)  h为并查集这棵"树"的高度
+       注：O(log*n)= 0              n<=1
+          O(log*n)=1+log*(logn)    n>1    近乎是O(1)级别的
+          
+    
